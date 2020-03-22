@@ -162,6 +162,10 @@ nav div.active a {
   color: white;
 }
 
+main {
+  padding-bottom: 2.75rem;
+}
+
 main.album {
   display: -ms-grid;
   display: grid;
@@ -183,10 +187,44 @@ main.album figure figcaption {
   padding: .2rem 0;
 }
 
+main.artist {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: auto;
+      grid-template-rows: auto;
+}
+
+main.artist section {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 80px auto;
+      grid-template-columns: 80px auto;
+  margin: .75rem 5%;
+}
+
+main.artist section div img {
+  width: 100%;
+  -webkit-clip-path: circle(40px at center);
+          clip-path: circle(40px at center);
+}
+
+main.artist section div:nth-child(2) {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  padding-left: 5%;
+}
+
 @media only screen and (min-width: 29rem) {
   main.album {
     -ms-grid-columns: 1fr 1fr 1fr 1fr;
         grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+  main.artist {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
   }
 }
 /*# sourceMappingURL=styles.css.map */

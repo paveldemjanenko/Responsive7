@@ -51,6 +51,10 @@ nav {
     }
 }
 
+main {
+    padding-bottom: 2.75rem;
+}
+
 main.album {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -67,5 +71,27 @@ main.album {
     figure figcaption {
         text-align: center;
         padding: .2rem 0;
+    }
+}
+
+main.artist {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+
+    section {
+        display: grid;
+        grid-template-columns: 80px auto;
+        margin: .75rem 5%;
+
+        div img {
+            width: 100%;
+            clip-path: circle(40px at center);
+        }
+
+        div:nth-child(2) {
+            align-self: center;
+            padding-left: 5%;
+        }
     }
 }
